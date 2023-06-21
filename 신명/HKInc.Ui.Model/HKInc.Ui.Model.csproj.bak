@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{899963F0-93B5-4306-8365-A5824447B962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HKInc.Ui.Model</RootNamespace>
+    <AssemblyName>HKInc.Ui.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDomain\BaseDomain.cs" />
+    <Compile Include="BaseDomain\GsValue.cs" />
+    <Compile Include="BaseDomain\MES_BaseDomain.cs" />
+    <Compile Include="BaseDomain\MES_BaseDomain2.cs" />
+    <Compile Include="Context\ProductionContext.cs" />
+    <Compile Include="Domain\SYS\CodeMaster.cs" />
+    <Compile Include="Domain\SYS\CodeSql.cs" />
+    <Compile Include="Domain\SYS\CultureField.cs" />
+    <Compile Include="Domain\SYS\FieldLabel.cs" />
+    <Compile Include="Domain\SYS\GridLayout.cs" />
+    <Compile Include="Domain\SYS\GroupMenu.cs" />
+    <Compile Include="Domain\SYS\Holiday.cs" />
+    <Compile Include="Domain\SYS\LoginLog.cs" />
+    <Compile Include="Domain\SYS\Menu.cs" />
+    <Compile Include="Domain\SYS\MenuBookmark.cs" />
+    <Compile Include="Domain\SYS\MenuFavorite.cs" />
+    <Compile Include="Domain\SYS\MenuLog.cs" />
+    <Compile Include="Domain\SYS\MenuUserList.cs" />
+    <Compile Include="Domain\SYS\MenuUserRight.cs" />
+    <Compile Include="Domain\SYS\Module.cs" />
+    <Compile Include="Domain\SYS\Notice.cs" />
+    <Compile Include="Domain\SYS\Screen.cs" />
+    <Compile Include="Domain\SYS\StandardMessage.cs" />
+    <Compile Include="Domain\SYS\SystemLog.cs" />
+    <Compile Include="Domain\Temp.cs" />
+    <Compile Include="Domain\SYS\User.cs" />
+    <Compile Include="Domain\SYS\UserGroup.cs" />
+    <Compile Include="Domain\SYS\UserUserGroup.cs" />
+    <Compile Include="Domain\TEMP\TEMP_MAT_DEAD_DTL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_ORDER_STATUS_GRID.cs" />
+    <Compile Include="Domain\TEMP\TEMP_ITEM_MOVE_NO_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_ORDER_STATUS_CHART.cs" />
+    <Compile Include="Domain\TEMP\TEMP_BAN_DEAD_DTL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PROD_STOCK_DETAIL_LOT_NO.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PROD_STOCK_DETAIL_DAY.cs" />
+    <Compile Include="Domain\TEMP\TEMP_BAN_STOCK_ITEM.cs" />
+    <Compile Include="Domain\TEMP\TEMP_BAN_STOCK_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PUR1400_REPORT.cs" />
+    <Compile Include="Domain\TEMP\TEMP_TRADING_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_WORK_REF_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_WORK_REF_MASTER.cs" />
+    <Compile Include="Domain\TEMP\TEMP_ITEM_MOVE_NO_MASTER.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PUR_STATUS_CHART.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFFME_STATUS.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFMPS1300.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFMPS1301.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFORD1600.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFOUTPROC_STOCK_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFPOP_INSP_FINAL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFPOP_PACK.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFPOP1000.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFORD1102_MASTER.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFPUR_NOT_IN_STATUS.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFQCT1201_MASTER.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFSTD1103_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFQCT1100_SUB.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XPFMACHINECHECK_LIST.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XFMEA1003_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP1000.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP2000.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP3000.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PROD_DEAD_DTL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PROD_STOCK_MASTER.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP4000.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP4001.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PUR_STOCK_ITEM.cs" />
+    <Compile Include="Domain\TEMP\TEMP_PUR_STOCK_DETAIL.cs" />
+    <Compile Include="Domain\TEMP\TEMP_XRREP5000.cs" />
+    <Compile Include="Domain\TEMP\XPFPUR1202_TEMP.cs" />
+    <Compile Include="Domain\VIEW\TN_LOT_DTL.cs" />
+    <Compile Include="Domain\VIEW\TN_MAT_DEAD_HISTORY.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN_DEAD_HISTORY.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN1102.cs" />
+    <Compile Include="Domain\VIEW\TN_ITEM_MOVE.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1001.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1002.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1203.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1500.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1303.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1600.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1501.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1500.cs" />
+    <Compile Include="Domain\VIEW\VI_BUSINESS_MANAGEMENT_USER.cs" />
+    <Compile Include="Domain\VIEW\VI_DISPOSAL_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_MCSRCLOT_STOCK.cs" />
+    <Compile Include="Domain\VIEW\VI_TOOL1002_LIST.cs" />
+    <Compile Include="Domain\VIEW\VI_MPS1800_LIST.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1300.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1102.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1104.cs" />
+    <Compile Include="Domain\VIEW\VI_XFORD1102_MASTER_VIEW.cs" />
+    <Compile Include="Domain\VIEW\VI_MEA1003_MASTER_LIST.cs" />
+    <Compile Include="Domain\VIEW\TN_PROD_DEAD_HISTORY.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1101.cs" />
+    <Compile Include="Domain\VIEW\TN_MAT_DEAD_DTL.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN_DEAD_DTL.cs" />
+    <Compile Include="Domain\VIEW\TN_PROD_DEAD_DTL.cs" />
+    <Compile Include="Domain\VIEW\TN_MAT_DEAD_MST.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN_DEAD_MST.cs" />
+    <Compile Include="Domain\VIEW\TN_PROD_DEAD_MST.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_SHIPMENT_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_OUT_PROC_STOCK_MASTER.cs" />
+    <Compile Include="Domain\VIEW\VI_PROD_STOCK_ITEM.cs" />
+    <Compile Include="Domain\VIEW\VI_BAN_STOCK_PRODUCT_LOT_NO.cs" />
+    <Compile Include="Domain\VIEW\VI_PROD_STOCK_PRODUCT_LOT_NO.cs" />
+    <Compile Include="Domain\VIEW\VI_BAN_STOCK_IN_LOT_NO.cs" />
+    <Compile Include="Domain\VIEW\VI_BAN_STOCK_ITEM.cs" />
+    <Compile Include="Domain\VIEW\VI_QCT1300_LIST.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1302.cs" />
+    <Compile Include="Domain\VIEW\TN_TOOL1003.cs" />
+    <Compile Include="Domain\VIEW\VI_LOT_TRACKING.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_FME_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_FREQNTLY_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_PROCESS_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_SETTING_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_RETURN_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\VI_SRC_STOCK.cs" />
+    <Compile Include="Domain\VIEW\VI_SRC_STOCK_SUM.cs" />
+    <Compile Include="Domain\VIEW\VI_SRC_USE.cs" />
+    <Compile Include="Domain\VIEW\VI_WH_POSITON_QTY.cs" />
+    <Compile Include="Domain\VIEW\VI_WH_STOCK_QTY.cs" />
+    <Compile Include="Domain\VIEW\VI_PUR_STOCK_ITEM.cs" />
+    <Compile Include="Domain\VIEW\VI_PUR_STOCK_IN_LOT_NO.cs" />
+    <Compile Include="Domain\VIEW\VI_INSP_IN_OBJECT.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN1101.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN1100.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN1001.cs" />
+    <Compile Include="Domain\VIEW\TN_LOT_MST.cs" />
+    <Compile Include="Domain\VIEW\TN_BAN1000.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1401.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1400.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1301.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1300.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1300.cs" />
+    <Compile Include="Domain\VIEW\TN_TOOL1002.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1202.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1201.cs" />
+    <Compile Include="Domain\VIEW\TN_SRC1001.cs" />
+    <Compile Include="Domain\VIEW\TN_SRC1000.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1004.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1003.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1002.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1101.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1100.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1001.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1000.cs" />
+    <Compile Include="Domain\VIEW\TN_DEV1000.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1700.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1600.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1501.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1500.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1401.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1400.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1301.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1300.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1201.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1200.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1101.cs" />
+    <Compile Include="Domain\VIEW\TN_PUR1100.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1101.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1100.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1001.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1000.cs" />
+    <Compile Include="Domain\VIEW\TN_TOOL1001.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1200.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1100.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1201.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1200.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1100.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1001.cs" />
+    <Compile Include="Domain\VIEW\TN_ORD1000.cs" />
+    <Compile Include="Domain\VIEW\TN_QCT1400.cs" />
+    <Compile Include="Domain\VIEW\TN_MPS1000.cs" />
+    <Compile Include="Domain\VIEW\TN_MEA1201.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1103.cs" />
+    <Compile Include="Domain\VIEW\TN_TRY1000.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1102.cs" />
+    <Compile Include="Domain\VIEW\TN_WMS2000.cs" />
+    <Compile Include="Domain\VIEW\TN_WMS1000.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1300.cs" />
+    <Compile Include="Domain\VIEW\TN_STD4M001.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1101.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1100.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1000.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1200.cs" />
+    <Compile Include="Domain\VIEW\TN_STD1400.cs" />
+    <Compile Include="Domain\VIEW\VI_XRREP6000_LIST.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Domain\App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

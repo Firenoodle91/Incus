@@ -1,0 +1,3038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20ACF2CF-E3AB-431B-AACA-A03F3DA936EC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HKInc.Ui.View</RootNamespace>
+    <AssemblyName>HKInc.Ui.View</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '일상개발|AnyCPU'">
+    <OutputPath>bin\일상개발\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Drawing, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Reporting, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Reporting.Extensions, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4">
+      <HintPath>..\HKInc.Service\bin\Debug\NModbus4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Handler\LookUpButtonHandler.cs" />
+    <Compile Include="PopupFactory\ProductionPopupFactory.cs" />
+    <Compile Include="PopupFactory\ProductionPopupView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XFSMPS1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XFSMPS1000.Designer.cs">
+      <DependentUpon>XFSMPS1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFMPS1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFMPS1200.Designer.cs">
+      <DependentUpon>XSFMPS1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD1101.Designer.cs">
+      <DependentUpon>XSFORD1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPROD_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPROD_STOCK.Designer.cs">
+      <DependentUpon>XSFPROD_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100_COPY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100_COPY.Designer.cs">
+      <DependentUpon>XSFPUR1100_COPY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100_NEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100_NEW.Designer.cs">
+      <DependentUpon>XSFPUR1100_NEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1101_NEW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1101_NEW.Designer.cs">
+      <DependentUpon>XSFPUR1101_NEW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1201_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1201_RETURN.Designer.cs">
+      <DependentUpon>XSFPUR1201_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1200_RETURN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1200_RETURN.Designer.cs">
+      <DependentUpon>XSFPUR1200_RETURN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1400.Designer.cs">
+      <DependentUpon>XSFPUR1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1401.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1401.Designer.cs">
+      <DependentUpon>XSFPUR1401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD_STATUS.Designer.cs">
+      <DependentUpon>XSFORD_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1700.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1700.Designer.cs">
+      <DependentUpon>XSFPUR1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_CHECK_DIVISION_COPY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_CHECK_DIVISION_COPY.Designer.cs">
+      <DependentUpon>XSFQCT_CHECK_DIVISION_COPY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFMACHINE_CHECK_COPY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFMACHINE_CHECK_COPY.Designer.cs">
+      <DependentUpon>XSFMACHINE_CHECK_COPY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_ITEM_COPY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_ITEM_COPY.Designer.cs">
+      <DependentUpon>XSFQCT_ITEM_COPY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_SHIPMENT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_SHIPMENT.Designer.cs">
+      <DependentUpon>XSFQCT_SHIPMENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORDER_REF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORDER_REF.Designer.cs">
+      <DependentUpon>XSFORDER_REF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_TO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_TO.Designer.cs">
+      <DependentUpon>XSFQCT_TO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFSTD1320.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFSTD1320.Designer.cs">
+      <DependentUpon>XSFSTD1320.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFWORK_REF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFWORK_REF.Designer.cs">
+      <DependentUpon>XSFWORK_REF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_FME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_FME.Designer.cs">
+      <DependentUpon>XSFQCT_FME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_FREQNTLY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_FREQNTLY.Designer.cs">
+      <DependentUpon>XSFQCT_FREQNTLY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_IN.Designer.cs">
+      <DependentUpon>XSFQCT_IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1100.Designer.cs">
+      <DependentUpon>XSFPUR1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR1101.Designer.cs">
+      <DependentUpon>XSFPUR1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFORD1100.Designer.cs">
+      <DependentUpon>XSFORD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFPUR_STATUS.Designer.cs">
+      <DependentUpon>XSFPUR_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_PROCESS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_PROCESS.Designer.cs">
+      <DependentUpon>XSFQCT_PROCESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_SETTING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFQCT_SETTING.Designer.cs">
+      <DependentUpon>XSFQCT_SETTING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFSTD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\XSFSTD1100.Designer.cs">
+      <DependentUpon>XSFSTD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\CultureFieldList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\CultureFieldList.Designer.cs">
+      <DependentUpon>CultureFieldList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\FMenuG2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\FMenuG2.designer.cs">
+      <DependentUpon>FMenuG2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\FMenuToTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\FMenuToTable.designer.cs">
+      <DependentUpon>FMenuToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\FUserGList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\FUserGList.designer.cs">
+      <DependentUpon>FUserGList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\HolidayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\HolidayList.Designer.cs">
+      <DependentUpon>HolidayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\LabelList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\LabelList.Designer.cs">
+      <DependentUpon>LabelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\LoginLogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\LoginLogList.Designer.cs">
+      <DependentUpon>LoginLogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\MasterCodeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\MasterCodeList.Designer.cs">
+      <DependentUpon>MasterCodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\MenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\MenuEdit.Designer.cs">
+      <DependentUpon>MenuEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\MenuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\MenuList.Designer.cs">
+      <DependentUpon>MenuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\MenuOpenLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\MenuOpenLog.Designer.cs">
+      <DependentUpon>MenuOpenLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\MessageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\MessageList.Designer.cs">
+      <DependentUpon>MessageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\ModuleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\ModuleEdit.Designer.cs">
+      <DependentUpon>ModuleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\ModuleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\ModuleList.Designer.cs">
+      <DependentUpon>ModuleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\NoticeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\NoticeEditor.Designer.cs">
+      <DependentUpon>NoticeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\ScreenEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\ScreenEdit.Designer.cs">
+      <DependentUpon>ScreenEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\ScreenList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\ScreenList.Designer.cs">
+      <DependentUpon>ScreenList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\SysLogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\SysLogList.Designer.cs">
+      <DependentUpon>SysLogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\DepartmentSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\DepartmentSelect.Designer.cs">
+      <DependentUpon>DepartmentSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\TPReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\TPReport.Designer.cs">
+      <DependentUpon>TPReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\UserGroupEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\UserGroupEdit.Designer.cs">
+      <DependentUpon>UserGroupEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\UserGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\UserGroupList.Designer.cs">
+      <DependentUpon>UserGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\UserGroupSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\UserGroupSelect.Designer.cs">
+      <DependentUpon>UserGroupSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYS\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYS\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELECT_POPUP\UserSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELECT_POPUP\UserSelect.Designer.cs">
+      <DependentUpon>UserSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN1000.Designer.cs">
+      <DependentUpon>XFBAN1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN1100.Designer.cs">
+      <DependentUpon>XFBAN1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN_STOCK_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN_STOCK_V2.Designer.cs">
+      <DependentUpon>XFBAN_STOCK_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN\XFBAN_STOCK.Designer.cs">
+      <DependentUpon>XFBAN_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN_POPUP\XPFBAN1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN_POPUP\XPFBAN1102.Designer.cs">
+      <DependentUpon>XPFBAN1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BAN_POPUP\XPFBAN1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BAN_POPUP\XPFBAN1000.Designer.cs">
+      <DependentUpon>XPFBAN1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DEV\XFDEV1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DEV\XFDEV1000.Designer.cs">
+      <DependentUpon>XFDEV1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DEV_POPUP\XPFDEV1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DEV_POPUP\XPFDEV1000.Designer.cs">
+      <DependentUpon>XPFDEV1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFCHFI2000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFCHFI2000.Designer.cs">
+      <DependentUpon>XFCHFI2000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFCHFI2001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFCHFI2001.Designer.cs">
+      <DependentUpon>XFCHFI2001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1300.Designer.cs">
+      <DependentUpon>XFMEA1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1301.Designer.cs">
+      <DependentUpon>XFMEA1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1302.Designer.cs">
+      <DependentUpon>XFMEA1302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1400.Designer.cs">
+      <DependentUpon>XFMEA1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFUPH1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFUPH1100.Designer.cs">
+      <DependentUpon>XFUPH1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1000.Designer.cs">
+      <DependentUpon>XFMEA1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFUPH1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFUPH1000.Designer.cs">
+      <DependentUpon>XFUPH1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1003.Designer.cs">
+      <DependentUpon>XFMEA1003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1002.Designer.cs">
+      <DependentUpon>XFMEA1002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1001.Designer.cs">
+      <DependentUpon>XFMEA1001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1100.Designer.cs">
+      <DependentUpon>XFMEA1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1101.Designer.cs">
+      <DependentUpon>XFMEA1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1200.Designer.cs">
+      <DependentUpon>XFMEA1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFMEA1201.Designer.cs">
+      <DependentUpon>XFMEA1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFWEL2000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFWEL2000.Designer.cs">
+      <DependentUpon>XFWEL2000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA\XFWEL2001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA\XFWEL2001.Designer.cs">
+      <DependentUpon>XFWEL2001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA_POPUP\XPFMEA1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA_POPUP\XPFMEA1000.Designer.cs">
+      <DependentUpon>XPFMEA1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MEA_POPUP\XPFMEA1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MEA_POPUP\XPFMEA1100.Designer.cs">
+      <DependentUpon>XPFMEA1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1100.Designer.cs">
+      <DependentUpon>XFMOLD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1101.Designer.cs">
+      <DependentUpon>XFMOLD1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1300.Designer.cs">
+      <DependentUpon>XFMOLD1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1400.Designer.cs">
+      <DependentUpon>XFMOLD1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1500.Designer.cs">
+      <DependentUpon>XFMOLD1500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1600.Designer.cs">
+      <DependentUpon>XFMOLD1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1700.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD\XFMOLD1700.Designer.cs">
+      <DependentUpon>XFMOLD1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD_POPUP\XPFMOLD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD_POPUP\XPFMOLD1100.Designer.cs">
+      <DependentUpon>XPFMOLD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MOLD_POPUP\XPFMOLD1400_COPY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MOLD_POPUP\XPFMOLD1400_COPY.Designer.cs">
+      <DependentUpon>XPFMOLD1400_COPY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1000.Designer.cs">
+      <DependentUpon>XFMPS1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1001.Designer.cs">
+      <DependentUpon>XFMPS1001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1100_DEV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1100_DEV.Designer.cs">
+      <DependentUpon>XFMPS1100_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1100.Designer.cs">
+      <DependentUpon>XFMPS1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1210.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1210.Designer.cs">
+      <DependentUpon>XFMPS1210.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1200_DEV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1200_DEV.Designer.cs">
+      <DependentUpon>XFMPS1200_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1200.Designer.cs">
+      <DependentUpon>XFMPS1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1201.Designer.cs">
+      <DependentUpon>XFMPS1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1300.Designer.cs">
+      <DependentUpon>XFMPS1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1301.Designer.cs">
+      <DependentUpon>XFMPS1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1400_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1400_V2.Designer.cs">
+      <DependentUpon>XFMPS1400_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1400.Designer.cs">
+      <DependentUpon>XFMPS1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1500.Designer.cs">
+      <DependentUpon>XFMPS1500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1501.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1501.Designer.cs">
+      <DependentUpon>XFMPS1501.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1800.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1800.Designer.cs">
+      <DependentUpon>XFMPS1800.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1700.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1700.Designer.cs">
+      <DependentUpon>XFMPS1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1600.Designer.cs">
+      <DependentUpon>XFMPS1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1900.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS\XFMPS1900.designer.cs">
+      <DependentUpon>XFMPS1900.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1600.Designer.cs">
+      <DependentUpon>XPFMPS1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1801.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1801.Designer.cs">
+      <DependentUpon>XPFMPS1801.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1800.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MPS_POPUP\XPFMPS1800.Designer.cs">
+      <DependentUpon>XPFMPS1800.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1000_DEV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1000_DEV.Designer.cs">
+      <DependentUpon>XFORD1000_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1000.Designer.cs">
+      <DependentUpon>XFORD1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1100_DEV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1100_DEV.Designer.cs">
+      <DependentUpon>XFORD1100_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1100.Designer.cs">
+      <DependentUpon>XFORD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1102.Designer.cs">
+      <DependentUpon>XFORD1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1101.Designer.cs">
+      <DependentUpon>XFORD1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1200.Designer.cs">
+      <DependentUpon>XFORD1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1300.Designer.cs">
+      <DependentUpon>XFORD1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1500.Designer.cs">
+      <DependentUpon>XFORD1500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1400.Designer.cs">
+      <DependentUpon>XFORD1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1501.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1501.Designer.cs">
+      <DependentUpon>XFORD1501.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD1600.Designer.cs">
+      <DependentUpon>XFORD1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_MM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_MM.Designer.cs">
+      <DependentUpon>XFORD_STOCK_MM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_DAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_DAY.Designer.cs">
+      <DependentUpon>XFORD_STOCK_DAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_LOT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD\XFORD_STOCK_LOT.Designer.cs">
+      <DependentUpon>XFORD_STOCK_LOT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1102.Designer.cs">
+      <DependentUpon>XPFORD1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1000_DEV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1000_DEV.Designer.cs">
+      <DependentUpon>XPFORD1000_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ORD_POPUP\XPFORD1000.Designer.cs">
+      <DependentUpon>XPFORD1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP1000_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP1000_V2.Designer.cs">
+      <DependentUpon>XFPOP1000_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC_V3.Designer.cs">
+      <DependentUpon>XFPOP_PLC_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC_V2.Designer.cs">
+      <DependentUpon>XFPOP_PLC_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PLC.Designer.cs">
+      <DependentUpon>XFPOP_PLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_INSP_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_INSP_FINAL.Designer.cs">
+      <DependentUpon>XFPOP_INSP_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_PACK.Designer.cs">
+      <DependentUpon>XFPOP_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP1000.Designer.cs">
+      <DependentUpon>XFPOP1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_REWORK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_REWORK.Designer.cs">
+      <DependentUpon>XFPOP_REWORK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_SELECT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP\XFPOP_SELECT.Designer.cs">
+      <DependentUpon>XFPOP_SELECT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_V2.Designer.cs">
+      <DependentUpon>XPFINSPECTION_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_FINAL.Designer.cs">
+      <DependentUpon>XPFINSPECTION_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_FINAL_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_FINAL_PACK.Designer.cs">
+      <DependentUpon>XPFINSPECTION_FINAL_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION_PACK.Designer.cs">
+      <DependentUpon>XPFINSPECTION_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX.Designer.cs">
+      <DependentUpon>XPFITEMMOVEPRINT_BOX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX_V2.Designer.cs">
+      <DependentUpon>XPFITEMMOVEPRINT_BOX_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_INSP_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_INSP_FINAL.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE_INSP_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_PACK.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_DAEYOUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_DAEYOUNG.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_START_DAEYOUNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_INSP_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_INSP_FINAL.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_START_INSP_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_PACK.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_START_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSP_FINAL_END.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSP_FINAL_END.Designer.cs">
+      <DependentUpon>XPFINSP_FINAL_END.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_SM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START_SM.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_START_SM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMOLDCHECK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMOLDCHECK.Designer.cs">
+      <DependentUpon>XPFMOLDCHECK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPLCINFO_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPLCINFO_V2.Designer.cs">
+      <DependentUpon>XPFPLCINFO_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V3.Designer.cs">
+      <DependentUpon>XPFRAW_MATERIAL_IN_V3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V2.Designer.cs">
+      <DependentUpon>XPFRAW_MATERIAL_IN_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESTART_TO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESTART_TO.Designer.cs">
+      <DependentUpon>XPFRESTART_TO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINESTOP_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINESTOP_V2.Designer.cs">
+      <DependentUpon>XPFMACHINESTOP_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT_LABEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT_LABEL.Designer.cs">
+      <DependentUpon>XPFPACK_BARCODE_PRINT_LABEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_END.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_END.Designer.cs">
+      <DependentUpon>XPFPACK_END.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT.Designer.cs">
+      <DependentUpon>XPFPACK_BARCODE_PRINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPOPPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPOPPDF.Designer.cs">
+      <DependentUpon>XPFPOPPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRAW_MATERIAL_IN.Designer.cs">
+      <DependentUpon>XPFRAW_MATERIAL_IN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_REWORK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_REWORK.Designer.cs">
+      <DependentUpon>XPFRESULT_DEFAULT_REWORK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_V2.Designer.cs">
+      <DependentUpon>XPFRESULT_DEFAULT_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT.Designer.cs">
+      <DependentUpon>XPFRESULT_DEFAULT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_INSP_FINAL_OLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_INSP_FINAL_OLD.Designer.cs">
+      <DependentUpon>XPFRESULT_INSP_FINAL_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_INSP_FINAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_INSP_FINAL.Designer.cs">
+      <DependentUpon>XPFRESULT_INSP_FINAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_PACK_OLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_PACK_OLD.Designer.cs">
+      <DependentUpon>XPFRESULT_PACK_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_PACK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_PACK.Designer.cs">
+      <DependentUpon>XPFRESULT_PACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFBANIN_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFBANIN_START.Designer.cs">
+      <DependentUpon>XPFBANIN_START.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFBANIN_CHANGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFBANIN_CHANGE.Designer.cs">
+      <DependentUpon>XPFBANIN_CHANGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_REWORK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_REWORK.Designer.cs">
+      <DependentUpon>XPFRESULT_REWORK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_TOOL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_TOOL.Designer.cs">
+      <DependentUpon>XPFRESULT_TOOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFREWORK_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFREWORK_START.Designer.cs">
+      <DependentUpon>XPFREWORK_START.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE.Designer.cs">
+      <DependentUpon>XPFSRCIN_CHANGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_DAEYOUNG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_DAEYOUNG.Designer.cs">
+      <DependentUpon>XPFSRCIN_CHANGE_DAEYOUNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_SM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_SM.Designer.cs">
+      <DependentUpon>XPFSRCIN_CHANGE_SM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_START.Designer.cs">
+      <DependentUpon>XPFSRCIN_START.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND_V2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND_V2.Designer.cs">
+      <DependentUpon>XPFWORKEND_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND.Designer.cs">
+      <DependentUpon>XPFWORKEND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINECHECK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINECHECK.Designer.cs">
+      <DependentUpon>XPFMACHINECHECK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_OLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_DEFAULT_OLD.Designer.cs">
+      <DependentUpon>XPFRESULT_DEFAULT_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVESCAN_START.Designer.cs">
+      <DependentUpon>XPFITEMMOVESCAN_START.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFJOBSETTING.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFJOBSETTING.Designer.cs">
+      <DependentUpon>XPFJOBSETTING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFINSPECTION.Designer.cs">
+      <DependentUpon>XPFINSPECTION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPOPIMG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFPOPIMG.Designer.cs">
+      <DependentUpon>XPFPOPIMG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_HEAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_HEAT.Designer.cs">
+      <DependentUpon>XPFRESULT_HEAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_HEAT_TOOL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_HEAT_TOOL.Designer.cs">
+      <DependentUpon>XPFRESULT_HEAT_TOOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_TOOL_OLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFRESULT_TOOL_OLD.Designer.cs">
+      <DependentUpon>XPFRESULT_TOOL_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFITEMMOVEPRINT.Designer.cs">
+      <DependentUpon>XPFITEMMOVEPRINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_SJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_CHANGE_SJ.Designer.cs">
+      <DependentUpon>XPFSRCIN_CHANGE_SJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_START_SJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFSRCIN_START_SJ.Designer.cs">
+      <DependentUpon>XPFSRCIN_START_SJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINESTOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFMACHINESTOP.Designer.cs">
+      <DependentUpon>XPFMACHINESTOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND_REWORK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\POP_POPUP\XPFWORKEND_REWORK.Designer.cs">
+      <DependentUpon>XPFWORKEND_REWORK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFOUTPROC_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFOUTPROC_STOCK.Designer.cs">
+      <DependentUpon>XFOUTPROC_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1300.Designer.cs">
+      <DependentUpon>XFPUR1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1100.Designer.cs">
+      <DependentUpon>XFPUR1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1400.Designer.cs">
+      <DependentUpon>XFPUR1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1500.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1500.Designer.cs">
+      <DependentUpon>XFPUR1500.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1700.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1700.Designer.cs">
+      <DependentUpon>XFPUR1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_IN_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_IN_STATUS.Designer.cs">
+      <DependentUpon>XFPUR_IN_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_NOT_IN_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_NOT_IN_STATUS.Designer.cs">
+      <DependentUpon>XFPUR_NOT_IN_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR_STOCK.Designer.cs">
+      <DependentUpon>XFPUR_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1200.Designer.cs">
+      <DependentUpon>XFPUR1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR\XFPUR1600.Designer.cs">
+      <DependentUpon>XFPUR1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1203.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1203.Designer.cs">
+      <DependentUpon>XPFPUR1203.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1201.Designer.cs">
+      <DependentUpon>XPFPUR1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1202.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1202.Designer.cs">
+      <DependentUpon>XPFPUR1202.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1302.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1302.Designer.cs">
+      <DependentUpon>XPFPUR1302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR1200.Designer.cs">
+      <DependentUpon>XPFPUR1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR_STOCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PUR_POPUP\XPFPUR_STOCK.Designer.cs">
+      <DependentUpon>XPFPUR_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1000.Designer.cs">
+      <DependentUpon>XFQCT1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1100.Designer.cs">
+      <DependentUpon>XFQCT1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1101.Designer.cs">
+      <DependentUpon>XFQCT1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1102.Designer.cs">
+      <DependentUpon>XFQCT1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1103.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1103.Designer.cs">
+      <DependentUpon>XFQCT1103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1104.Designer.cs">
+      <DependentUpon>XFQCT1104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1106.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1106.Designer.cs">
+      <DependentUpon>XFQCT1106.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1105.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1105.Designer.cs">
+      <DependentUpon>XFQCT1105.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1107.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1107.Designer.cs">
+      <DependentUpon>XFQCT1107.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1200.Designer.cs">
+      <DependentUpon>XFQCT1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1201.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1201.Designer.cs">
+      <DependentUpon>XFQCT1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1300.Designer.cs">
+      <DependentUpon>XFQCT1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1400.Designer.cs">
+      <DependentUpon>XFQCT1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1600.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1600.Designer.cs">
+      <DependentUpon>XFQCT1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1700.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1700.Designer.cs">
+      <DependentUpon>XFQCT1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1800.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1800.Designer.cs">
+      <DependentUpon>XFQCT1800.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1900.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT1900.Designer.cs">
+      <DependentUpon>XFQCT1900.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT_SPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT\XFQCT_SPC.Designer.cs">
+      <DependentUpon>XFQCT_SPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1900_DETAIL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1900_DETAIL.Designer.cs">
+      <DependentUpon>XPFQCT1900_DETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1900_MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1900_MASTER.Designer.cs">
+      <DependentUpon>XPFQCT1900_MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\RETCLABLE_PIT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\RETCLABLE_PIT.Designer.cs">
+      <DependentUpon>RETCLABLE_PIT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\RETCLABLE_PIT_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\RETCLABLE_PIT_V2.Designer.cs">
+      <DependentUpon>RETCLABLE_PIT_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XFRMTTF001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XFRMTTF001.Designer.cs">
+      <DependentUpon>XFRMTTF001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRCHFI_WEL2002.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRCHFI_WEL2002.Designer.cs">
+      <DependentUpon>XRCHFI_WEL2002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRCHFI_WEL2001.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRCHFI_WEL2001.Designer.cs">
+      <DependentUpon>XRCHFI_WEL2001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRFQCT1700.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRFQCT1700.Designer.cs">
+      <DependentUpon>XRFQCT1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVEDOC_PRESS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVEDOC_PRESS.Designer.cs">
+      <DependentUpon>XRITEMMOVEDOC_PRESS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO_DAEYOUNG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO_DAEYOUNG.Designer.cs">
+      <DependentUpon>XRITEMMOVENO_DAEYOUNG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO_S.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO_S.Designer.cs">
+      <DependentUpon>XRITEMMOVENO_S.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRMEA1300.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRMEA1300.designer.cs">
+      <DependentUpon>XRMEA1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRMEA1301.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRMEA1301.designer.cs">
+      <DependentUpon>XRMEA1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRMOLD1700.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRMOLD1700.Designer.cs">
+      <DependentUpon>XRMOLD1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRMOLD1701.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRMOLD1701.Designer.cs">
+      <DependentUpon>XRMOLD1701.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1000_DEV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1000_DEV.Designer.cs">
+      <DependentUpon>XRORD1000_DEV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1200_TRADING.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1200_TRADING.designer.cs">
+      <DependentUpon>XRORD1200_TRADING.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XFFME_STATUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XFFME_STATUS.Designer.cs">
+      <DependentUpon>XFFME_STATUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRITEMMOVENO.Designer.cs">
+      <DependentUpon>XRITEMMOVENO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1101.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1101.Designer.cs">
+      <DependentUpon>XRORD1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1200.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRORD1200.Designer.cs">
+      <DependentUpon>XRORD1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK_A4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK_A4.Designer.cs">
+      <DependentUpon>XRPACK_A4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK.Designer.cs">
+      <DependentUpon>XRPACK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRBAN1001.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRBAN1001.Designer.cs">
+      <DependentUpon>XRBAN1001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRBAN1101.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRBAN1101.Designer.cs">
+      <DependentUpon>XRBAN1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPACK_V2.Designer.cs">
+      <DependentUpon>XRPACK_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPOPIMG_PRINT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPOPIMG_PRINT.Designer.cs">
+      <DependentUpon>XRPOPIMG_PRINT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201_SCM.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201_SCM.Designer.cs">
+      <DependentUpon>XRPUR1201_SCM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201_V2.Designer.cs">
+      <DependentUpon>XRPUR1201_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1301_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1301_V2.Designer.cs">
+      <DependentUpon>XRPUR1301_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1400.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1400.Designer.cs">
+      <DependentUpon>XRPUR1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1000.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1000.Designer.cs">
+      <DependentUpon>XRQCT1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1002.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1002.Designer.cs">
+      <DependentUpon>XRQCT1002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1003.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1003.Designer.cs">
+      <DependentUpon>XRQCT1003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1004.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1004.Designer.cs">
+      <DependentUpon>XRQCT1004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1005.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1005.Designer.cs">
+      <DependentUpon>XRQCT1005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1100.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1100.Designer.cs">
+      <DependentUpon>XRQCT1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1300.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1300.Designer.cs">
+      <DependentUpon>XRQCT1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QCT_POPUP\XPFQCT1400.Designer.cs">
+      <DependentUpon>XPFQCT1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRMPS1200.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRMPS1200.Designer.cs">
+      <DependentUpon>XRMPS1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1301.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1301.Designer.cs">
+      <DependentUpon>XRPUR1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1201.Designer.cs">
+      <DependentUpon>XRPUR1201.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1001.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1001.Designer.cs">
+      <DependentUpon>XRQCT1001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1301.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1301.Designer.cs">
+      <DependentUpon>XRQCT1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1302.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1302.Designer.cs">
+      <DependentUpon>XRQCT1302.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1900.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRQCT1900.Designer.cs">
+      <DependentUpon>XRQCT1900.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP1000.Designer.cs">
+      <DependentUpon>XRREP1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP2000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP2000.Designer.cs">
+      <DependentUpon>XRREP2000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP3000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP3000.Designer.cs">
+      <DependentUpon>XRREP3000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP4000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP4000.Designer.cs">
+      <DependentUpon>XRREP4000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP4001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP4001.Designer.cs">
+      <DependentUpon>XRREP4001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP5000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP5000.Designer.cs">
+      <DependentUpon>XRREP5000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP6000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP6000.Designer.cs">
+      <DependentUpon>XRREP6000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP7000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP7000.Designer.cs">
+      <DependentUpon>XRREP7000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP8000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRREP8000.Designer.cs">
+      <DependentUpon>XRREP8000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRWMS2000.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRWMS2000.Designer.cs">
+      <DependentUpon>XRWMS2000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRWMS1000.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRWMS1000.Designer.cs">
+      <DependentUpon>XRWMS1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1100.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\REPORT\XRPUR1100.Designer.cs">
+      <DependentUpon>XRPUR1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1000.Designer.cs">
+      <DependentUpon>XFSTD1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1100.Designer.cs">
+      <DependentUpon>XFSTD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1103.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1103.Designer.cs">
+      <DependentUpon>XFSTD1103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1102.Designer.cs">
+      <DependentUpon>XFSTD1102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1104.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1104.Designer.cs">
+      <DependentUpon>XFSTD1104.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1200.Designer.cs">
+      <DependentUpon>XFSTD1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1300.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1300.Designer.cs">
+      <DependentUpon>XFSTD1300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1301.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1301.Designer.cs">
+      <DependentUpon>XFSTD1301.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1310.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1310.Designer.cs">
+      <DependentUpon>XFSTD1310.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1320.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1320.Designer.cs">
+      <DependentUpon>XFSTD1320.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1400.Designer.cs">
+      <DependentUpon>XFSTD1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD1101.Designer.cs">
+      <DependentUpon>XFSTD1101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD\XFSTD4M001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD\XFSTD4M001.Designer.cs">
+      <DependentUpon>XFSTD4M001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1100.Designer.cs">
+      <DependentUpon>XPFSTD1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1200.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1200.Designer.cs">
+      <DependentUpon>XPFSTD1200.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1400.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD1400.Designer.cs">
+      <DependentUpon>XPFSTD1400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD4M001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\STD_POPUP\XPFSTD4M001.Designer.cs">
+      <DependentUpon>XPFSTD4M001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1000.Designer.cs">
+      <DependentUpon>XFTOOL1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1002.Designer.cs">
+      <DependentUpon>XFTOOL1002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1001.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TOOL\XFTOOL1001.Designer.cs">
+      <DependentUpon>XFTOOL1001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TRY\XFTRY1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TRY\XFTRY1000.Designer.cs">
+      <DependentUpon>XFTRY1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UPH\XFUPH1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UPH\XFUPH1000.designer.cs">
+      <DependentUpon>XFUPH1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UPH\XFUPH1100.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UPH\XFUPH1100.designer.cs">
+      <DependentUpon>XFUPH1100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WMS\XFWMS1000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WMS\XFWMS1000.Designer.cs">
+      <DependentUpon>XFWMS1000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\WMS\XFWMS2000.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\WMS\XFWMS2000.Designer.cs">
+      <DependentUpon>XFWMS2000.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XFCKEYPAD_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XFCKEYPAD_LOGIN.Designer.cs">
+      <DependentUpon>XFCKEYPAD_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XFCNUMPAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XFCNUMPAD.Designer.cs">
+      <DependentUpon>XFCNUMPAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XFCKEYPAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XFCKEYPAD.Designer.cs">
+      <DependentUpon>XFCKEYPAD.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\TOOL_POPUP\" />
+    <Folder Include="View\WMS_POPUP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.TEMP.TEMP_PUR1400_REPORT.datasource" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.VIEW.TN_ORD1101.datasource" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.VIEW.TN_PUR1400.datasource" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.VIEW.TN_QCT1300.datasource" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.VIEW.TN_STD1400.datasource" />
+    <None Include="Properties\DataSources\HKInc.Ui.Model.Domain.VIEW.VI_QCT1300_LIST.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XFSMPS1000.resx">
+      <DependentUpon>XFSMPS1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFMPS1200.resx">
+      <DependentUpon>XSFMPS1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFORD1101.resx">
+      <DependentUpon>XSFORD1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPROD_STOCK.resx">
+      <DependentUpon>XSFPROD_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1100_COPY.resx">
+      <DependentUpon>XSFPUR1100_COPY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1100_NEW.resx">
+      <DependentUpon>XSFPUR1100_NEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1101_NEW.resx">
+      <DependentUpon>XSFPUR1101_NEW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1201_RETURN.resx">
+      <DependentUpon>XSFPUR1201_RETURN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1200_RETURN.resx">
+      <DependentUpon>XSFPUR1200_RETURN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1400.resx">
+      <DependentUpon>XSFPUR1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1401.resx">
+      <DependentUpon>XSFPUR1401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFORD_STATUS.resx">
+      <DependentUpon>XSFORD_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1700.resx">
+      <DependentUpon>XSFPUR1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_CHECK_DIVISION_COPY.resx">
+      <DependentUpon>XSFQCT_CHECK_DIVISION_COPY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFMACHINE_CHECK_COPY.resx">
+      <DependentUpon>XSFMACHINE_CHECK_COPY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_ITEM_COPY.resx">
+      <DependentUpon>XSFQCT_ITEM_COPY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_SHIPMENT.resx">
+      <DependentUpon>XSFQCT_SHIPMENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFORDER_REF.resx">
+      <DependentUpon>XSFORDER_REF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFSTD1320.resx">
+      <DependentUpon>XSFSTD1320.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFWORK_REF.resx">
+      <DependentUpon>XSFWORK_REF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_FME.resx">
+      <DependentUpon>XSFQCT_FME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_FREQNTLY.resx">
+      <DependentUpon>XSFQCT_FREQNTLY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_IN.resx">
+      <DependentUpon>XSFQCT_IN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1100.resx">
+      <DependentUpon>XSFPUR1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR1101.resx">
+      <DependentUpon>XSFPUR1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFORD1100.resx">
+      <DependentUpon>XSFORD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFPUR_STATUS.resx">
+      <DependentUpon>XSFPUR_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_PROCESS.resx">
+      <DependentUpon>XSFQCT_PROCESS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFQCT_SETTING.resx">
+      <DependentUpon>XSFQCT_SETTING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\XSFSTD1100.resx">
+      <DependentUpon>XSFSTD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\CultureFieldList.resx">
+      <DependentUpon>CultureFieldList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\FMenuG2.resx">
+      <DependentUpon>FMenuG2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\FMenuToTable.resx">
+      <DependentUpon>FMenuToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\FUserGList.resx">
+      <DependentUpon>FUserGList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\HolidayList.resx">
+      <DependentUpon>HolidayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\LabelList.resx">
+      <DependentUpon>LabelList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\LoginLogList.resx">
+      <DependentUpon>LoginLogList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\MasterCodeList.resx">
+      <DependentUpon>MasterCodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\MenuEdit.resx">
+      <DependentUpon>MenuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\MenuList.resx">
+      <DependentUpon>MenuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\MenuOpenLog.resx">
+      <DependentUpon>MenuOpenLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\MessageList.resx">
+      <DependentUpon>MessageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\ModuleEdit.resx">
+      <DependentUpon>ModuleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\ModuleList.resx">
+      <DependentUpon>ModuleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\NoticeEditor.resx">
+      <DependentUpon>NoticeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\ScreenEdit.resx">
+      <DependentUpon>ScreenEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\ScreenList.resx">
+      <DependentUpon>ScreenList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\SysLogList.resx">
+      <DependentUpon>SysLogList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\DepartmentSelect.resx">
+      <DependentUpon>DepartmentSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\TPReport.resx">
+      <DependentUpon>TPReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\UserGroupEdit.resx">
+      <DependentUpon>UserGroupEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\UserGroupList.resx">
+      <DependentUpon>UserGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\UserGroupSelect.resx">
+      <DependentUpon>UserGroupSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYS\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELECT_POPUP\UserSelect.resx">
+      <DependentUpon>UserSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN\XFBAN1000.resx">
+      <DependentUpon>XFBAN1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN\XFBAN1100.resx">
+      <DependentUpon>XFBAN1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN\XFBAN_STOCK_V2.resx">
+      <DependentUpon>XFBAN_STOCK_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN\XFBAN_STOCK.resx">
+      <DependentUpon>XFBAN_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN_POPUP\XPFBAN1102.resx">
+      <DependentUpon>XPFBAN1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BAN_POPUP\XPFBAN1000.resx">
+      <DependentUpon>XPFBAN1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DEV\XFDEV1000.resx">
+      <DependentUpon>XFDEV1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DEV_POPUP\XPFDEV1000.resx">
+      <DependentUpon>XPFDEV1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFCHFI2000.resx">
+      <DependentUpon>XFCHFI2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFCHFI2001.resx">
+      <DependentUpon>XFCHFI2001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1300.resx">
+      <DependentUpon>XFMEA1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1301.resx">
+      <DependentUpon>XFMEA1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1302.resx">
+      <DependentUpon>XFMEA1302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1400.resx">
+      <DependentUpon>XFMEA1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFUPH1100.resx">
+      <DependentUpon>XFUPH1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1000.resx">
+      <DependentUpon>XFMEA1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFUPH1000.resx">
+      <DependentUpon>XFUPH1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1003.resx">
+      <DependentUpon>XFMEA1003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1002.resx">
+      <DependentUpon>XFMEA1002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1001.resx">
+      <DependentUpon>XFMEA1001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1100.resx">
+      <DependentUpon>XFMEA1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1101.resx">
+      <DependentUpon>XFMEA1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1200.resx">
+      <DependentUpon>XFMEA1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFMEA1201.resx">
+      <DependentUpon>XFMEA1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFWEL2000.resx">
+      <DependentUpon>XFWEL2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA\XFWEL2001.resx">
+      <DependentUpon>XFWEL2001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA_POPUP\XPFMEA1000.resx">
+      <DependentUpon>XPFMEA1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MEA_POPUP\XPFMEA1100.resx">
+      <DependentUpon>XPFMEA1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD\XFMOLD1400.resx">
+      <DependentUpon>XFMOLD1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD\XFMOLD1500.resx">
+      <DependentUpon>XFMOLD1500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD\XFMOLD1600.resx">
+      <DependentUpon>XFMOLD1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD\XFMOLD1700.resx">
+      <DependentUpon>XFMOLD1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD_POPUP\XPFMOLD1100.resx">
+      <DependentUpon>XPFMOLD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MOLD_POPUP\XPFMOLD1400_COPY.resx">
+      <DependentUpon>XPFMOLD1400_COPY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1000.resx">
+      <DependentUpon>XFMPS1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1001.resx">
+      <DependentUpon>XFMPS1001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1100_DEV.resx">
+      <DependentUpon>XFMPS1100_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1100.resx">
+      <DependentUpon>XFMPS1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1210.resx">
+      <DependentUpon>XFMPS1210.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1200_DEV.resx">
+      <DependentUpon>XFMPS1200_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1200.resx">
+      <DependentUpon>XFMPS1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1201.resx">
+      <DependentUpon>XFMPS1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1300.resx">
+      <DependentUpon>XFMPS1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1301.resx">
+      <DependentUpon>XFMPS1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1400_V2.resx">
+      <DependentUpon>XFMPS1400_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1400.resx">
+      <DependentUpon>XFMPS1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1500.resx">
+      <DependentUpon>XFMPS1500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1501.resx">
+      <DependentUpon>XFMPS1501.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1800.resx">
+      <DependentUpon>XFMPS1800.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1700.resx">
+      <DependentUpon>XFMPS1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1600.resx">
+      <DependentUpon>XFMPS1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS\XFMPS1900.resx">
+      <DependentUpon>XFMPS1900.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS_POPUP\XPFMPS1600.resx">
+      <DependentUpon>XPFMPS1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS_POPUP\XPFMPS1801.resx">
+      <DependentUpon>XPFMPS1801.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MPS_POPUP\XPFMPS1800.resx">
+      <DependentUpon>XPFMPS1800.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1000_DEV.resx">
+      <DependentUpon>XFORD1000_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1000.resx">
+      <DependentUpon>XFORD1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1100_DEV.resx">
+      <DependentUpon>XFORD1100_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1100.resx">
+      <DependentUpon>XFORD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1102.resx">
+      <DependentUpon>XFORD1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1101.resx">
+      <DependentUpon>XFORD1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1200.resx">
+      <DependentUpon>XFORD1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1300.resx">
+      <DependentUpon>XFORD1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1500.resx">
+      <DependentUpon>XFORD1500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1400.resx">
+      <DependentUpon>XFORD1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1501.resx">
+      <DependentUpon>XFORD1501.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD1600.resx">
+      <DependentUpon>XFORD1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD_STOCK_MM.resx">
+      <DependentUpon>XFORD_STOCK_MM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD_STOCK_DAY.resx">
+      <DependentUpon>XFORD_STOCK_DAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD\XFORD_STOCK_LOT.resx">
+      <DependentUpon>XFORD_STOCK_LOT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD_POPUP\XPFORD1102.resx">
+      <DependentUpon>XPFORD1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD_POPUP\XPFORD1000_DEV.resx">
+      <DependentUpon>XPFORD1000_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ORD_POPUP\XPFORD1000.resx">
+      <DependentUpon>XPFORD1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP1000_V2.resx">
+      <DependentUpon>XFPOP1000_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_PLC_V3.resx">
+      <DependentUpon>XFPOP_PLC_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_PLC_V2.resx">
+      <DependentUpon>XFPOP_PLC_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_PLC.resx">
+      <DependentUpon>XFPOP_PLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_INSP_FINAL.resx">
+      <DependentUpon>XFPOP_INSP_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_PACK.resx">
+      <DependentUpon>XFPOP_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP1000.resx">
+      <DependentUpon>XFPOP1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_REWORK.resx">
+      <DependentUpon>XFPOP_REWORK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP\XFPOP_SELECT.resx">
+      <DependentUpon>XFPOP_SELECT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSPECTION_V2.resx">
+      <DependentUpon>XPFINSPECTION_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSPECTION_FINAL.resx">
+      <DependentUpon>XPFINSPECTION_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSPECTION_FINAL_PACK.resx">
+      <DependentUpon>XPFINSPECTION_FINAL_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSPECTION_PACK.resx">
+      <DependentUpon>XPFINSPECTION_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX.resx">
+      <DependentUpon>XPFITEMMOVEPRINT_BOX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVEPRINT_BOX_V2.resx">
+      <DependentUpon>XPFITEMMOVEPRINT_BOX_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE.resx">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_INSP_FINAL.resx">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE_INSP_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_CHANGE_PACK.resx">
+      <DependentUpon>XPFITEMMOVESCAN_CHANGE_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_START_DAEYOUNG.resx">
+      <DependentUpon>XPFITEMMOVESCAN_START_DAEYOUNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_START_INSP_FINAL.resx">
+      <DependentUpon>XPFITEMMOVESCAN_START_INSP_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_START_PACK.resx">
+      <DependentUpon>XPFITEMMOVESCAN_START_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSP_FINAL_END.resx">
+      <DependentUpon>XPFINSP_FINAL_END.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_START_SM.resx">
+      <DependentUpon>XPFITEMMOVESCAN_START_SM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFMOLDCHECK.resx">
+      <DependentUpon>XPFMOLDCHECK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPLCINFO_V2.resx">
+      <DependentUpon>XPFPLCINFO_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V3.resx">
+      <DependentUpon>XPFRAW_MATERIAL_IN_V3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRAW_MATERIAL_IN_V2.resx">
+      <DependentUpon>XPFRAW_MATERIAL_IN_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESTART_TO.resx">
+      <DependentUpon>XPFRESTART_TO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFMACHINESTOP_V2.resx">
+      <DependentUpon>XPFMACHINESTOP_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT_LABEL.resx">
+      <DependentUpon>XPFPACK_BARCODE_PRINT_LABEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPACK_END.resx">
+      <DependentUpon>XPFPACK_END.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPACK_BARCODE_PRINT.resx">
+      <DependentUpon>XPFPACK_BARCODE_PRINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPOPPDF.resx">
+      <DependentUpon>XPFPOPPDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRAW_MATERIAL_IN.resx">
+      <DependentUpon>XPFRAW_MATERIAL_IN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_DEFAULT_REWORK.resx">
+      <DependentUpon>XPFRESULT_DEFAULT_REWORK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_DEFAULT_V2.resx">
+      <DependentUpon>XPFRESULT_DEFAULT_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_DEFAULT.resx">
+      <DependentUpon>XPFRESULT_DEFAULT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_INSP_FINAL_OLD.resx">
+      <DependentUpon>XPFRESULT_INSP_FINAL_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_INSP_FINAL.resx">
+      <DependentUpon>XPFRESULT_INSP_FINAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_PACK_OLD.resx">
+      <DependentUpon>XPFRESULT_PACK_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_PACK.resx">
+      <DependentUpon>XPFRESULT_PACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFBANIN_START.resx">
+      <DependentUpon>XPFBANIN_START.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFBANIN_CHANGE.resx">
+      <DependentUpon>XPFBANIN_CHANGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_REWORK.resx">
+      <DependentUpon>XPFRESULT_REWORK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_TOOL.resx">
+      <DependentUpon>XPFRESULT_TOOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFREWORK_START.resx">
+      <DependentUpon>XPFREWORK_START.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_CHANGE.resx">
+      <DependentUpon>XPFSRCIN_CHANGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_CHANGE_DAEYOUNG.resx">
+      <DependentUpon>XPFSRCIN_CHANGE_DAEYOUNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_CHANGE_SM.resx">
+      <DependentUpon>XPFSRCIN_CHANGE_SM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_START.resx">
+      <DependentUpon>XPFSRCIN_START.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFWORKEND_V2.resx">
+      <DependentUpon>XPFWORKEND_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFWORKEND.resx">
+      <DependentUpon>XPFWORKEND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFMACHINECHECK.resx">
+      <DependentUpon>XPFMACHINECHECK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_DEFAULT_OLD.resx">
+      <DependentUpon>XPFRESULT_DEFAULT_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVESCAN_START.resx">
+      <DependentUpon>XPFITEMMOVESCAN_START.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFJOBSETTING.resx">
+      <DependentUpon>XPFJOBSETTING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFINSPECTION.resx">
+      <DependentUpon>XPFINSPECTION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFPOPIMG.resx">
+      <DependentUpon>XPFPOPIMG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_HEAT.resx">
+      <DependentUpon>XPFRESULT_HEAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_HEAT_TOOL.resx">
+      <DependentUpon>XPFRESULT_HEAT_TOOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFRESULT_TOOL_OLD.resx">
+      <DependentUpon>XPFRESULT_TOOL_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFITEMMOVEPRINT.resx">
+      <DependentUpon>XPFITEMMOVEPRINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_CHANGE_SJ.resx">
+      <DependentUpon>XPFSRCIN_CHANGE_SJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFSRCIN_START_SJ.resx">
+      <DependentUpon>XPFSRCIN_START_SJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFMACHINESTOP.resx">
+      <DependentUpon>XPFMACHINESTOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\POP_POPUP\XPFWORKEND_REWORK.resx">
+      <DependentUpon>XPFWORKEND_REWORK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFOUTPROC_STOCK.resx">
+      <DependentUpon>XFOUTPROC_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1300.resx">
+      <DependentUpon>XFPUR1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1100.resx">
+      <DependentUpon>XFPUR1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1400.resx">
+      <DependentUpon>XFPUR1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1500.resx">
+      <DependentUpon>XFPUR1500.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1700.resx">
+      <DependentUpon>XFPUR1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR_IN_STATUS.resx">
+      <DependentUpon>XFPUR_IN_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR_NOT_IN_STATUS.resx">
+      <DependentUpon>XFPUR_NOT_IN_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR_STOCK.resx">
+      <DependentUpon>XFPUR_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1200.resx">
+      <DependentUpon>XFPUR1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR\XFPUR1600.resx">
+      <DependentUpon>XFPUR1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR1203.resx">
+      <DependentUpon>XPFPUR1203.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR1201.resx">
+      <DependentUpon>XPFPUR1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR1202.resx">
+      <DependentUpon>XPFPUR1202.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR1302.resx">
+      <DependentUpon>XPFPUR1302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR1200.resx">
+      <DependentUpon>XPFPUR1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PUR_POPUP\XPFPUR_STOCK.resx">
+      <DependentUpon>XPFPUR_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1000.resx">
+      <DependentUpon>XFQCT1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1100.resx">
+      <DependentUpon>XFQCT1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1101.resx">
+      <DependentUpon>XFQCT1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1102.resx">
+      <DependentUpon>XFQCT1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1103.resx">
+      <DependentUpon>XFQCT1103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1104.resx">
+      <DependentUpon>XFQCT1104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1106.resx">
+      <DependentUpon>XFQCT1106.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1105.resx">
+      <DependentUpon>XFQCT1105.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1107.resx">
+      <DependentUpon>XFQCT1107.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1200.resx">
+      <DependentUpon>XFQCT1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1201.resx">
+      <DependentUpon>XFQCT1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1300.resx">
+      <DependentUpon>XFQCT1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1400.resx">
+      <DependentUpon>XFQCT1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1600.resx">
+      <DependentUpon>XFQCT1600.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1700.resx">
+      <DependentUpon>XFQCT1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1800.resx">
+      <DependentUpon>XFQCT1800.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT1900.resx">
+      <DependentUpon>XFQCT1900.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT\XFQCT_SPC.resx">
+      <DependentUpon>XFQCT_SPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT_POPUP\XPFQCT1900_DETAIL.resx">
+      <DependentUpon>XPFQCT1900_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT_POPUP\XPFQCT1900_MASTER.resx">
+      <DependentUpon>XPFQCT1900_MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\RETCLABLE_PIT.resx">
+      <DependentUpon>RETCLABLE_PIT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\RETCLABLE_PIT_V2.resx">
+      <DependentUpon>RETCLABLE_PIT_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XFRMTTF001.resx">
+      <DependentUpon>XFRMTTF001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRCHFI_WEL2002.resx">
+      <DependentUpon>XRCHFI_WEL2002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRCHFI_WEL2001.resx">
+      <DependentUpon>XRCHFI_WEL2001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRFQCT1700.resx">
+      <DependentUpon>XRFQCT1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRITEMMOVEDOC_PRESS.resx">
+      <DependentUpon>XRITEMMOVEDOC_PRESS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRITEMMOVENO_DAEYOUNG.resx">
+      <DependentUpon>XRITEMMOVENO_DAEYOUNG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRITEMMOVENO_S.resx">
+      <DependentUpon>XRITEMMOVENO_S.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRMEA1300.resx">
+      <DependentUpon>XRMEA1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRMEA1301.resx">
+      <DependentUpon>XRMEA1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRMOLD1700.resx">
+      <DependentUpon>XRMOLD1700.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRMOLD1701.resx">
+      <DependentUpon>XRMOLD1701.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRORD1000_DEV.resx">
+      <DependentUpon>XRORD1000_DEV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRORD1200_TRADING.resx">
+      <DependentUpon>XRORD1200_TRADING.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XFFME_STATUS.resx">
+      <DependentUpon>XFFME_STATUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRITEMMOVENO.resx">
+      <DependentUpon>XRITEMMOVENO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRORD1101.resx">
+      <DependentUpon>XRORD1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRORD1200.resx">
+      <DependentUpon>XRORD1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPACK_A4.resx">
+      <DependentUpon>XRPACK_A4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPACK.resx">
+      <DependentUpon>XRPACK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRBAN1001.resx">
+      <DependentUpon>XRBAN1001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRBAN1101.resx">
+      <DependentUpon>XRBAN1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPACK_V2.resx">
+      <DependentUpon>XRPACK_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPOPIMG_PRINT.resx">
+      <DependentUpon>XRPOPIMG_PRINT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1201_SCM.resx">
+      <DependentUpon>XRPUR1201_SCM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1201_V2.resx">
+      <DependentUpon>XRPUR1201_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1301_V2.resx">
+      <DependentUpon>XRPUR1301_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1400.resx">
+      <DependentUpon>XRPUR1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1000.resx">
+      <DependentUpon>XRQCT1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1002.resx">
+      <DependentUpon>XRQCT1002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1003.resx">
+      <DependentUpon>XRQCT1003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1004.resx">
+      <DependentUpon>XRQCT1004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1005.resx">
+      <DependentUpon>XRQCT1005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1100.resx">
+      <DependentUpon>XRQCT1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1300.resx">
+      <DependentUpon>XRQCT1300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QCT_POPUP\XPFQCT1400.resx">
+      <DependentUpon>XPFQCT1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRMPS1200.resx">
+      <DependentUpon>XRMPS1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1301.resx">
+      <DependentUpon>XRPUR1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1201.resx">
+      <DependentUpon>XRPUR1201.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRPUR1100.resx">
+      <DependentUpon>XRPUR1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1001.resx">
+      <DependentUpon>XRQCT1001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1301.resx">
+      <DependentUpon>XRQCT1301.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1302.resx">
+      <DependentUpon>XRQCT1302.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRQCT1900.resx">
+      <DependentUpon>XRQCT1900.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP1000.resx">
+      <DependentUpon>XRREP1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP2000.resx">
+      <DependentUpon>XRREP2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP3000.resx">
+      <DependentUpon>XRREP3000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP4000.resx">
+      <DependentUpon>XRREP4000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP4001.resx">
+      <DependentUpon>XRREP4001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP5000.resx">
+      <DependentUpon>XRREP5000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP6000.resx">
+      <DependentUpon>XRREP6000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP7000.resx">
+      <DependentUpon>XRREP7000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRREP8000.resx">
+      <DependentUpon>XRREP8000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRWMS1000.resx">
+      <DependentUpon>XRWMS1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\REPORT\XRWMS2000.resx">
+      <DependentUpon>XRWMS2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1000.resx">
+      <DependentUpon>XFSTD1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1100.resx">
+      <DependentUpon>XFSTD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1103.resx">
+      <DependentUpon>XFSTD1103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1102.resx">
+      <DependentUpon>XFSTD1102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1104.resx">
+      <DependentUpon>XFSTD1104.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1200.resx">
+      <DependentUpon>XFSTD1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1320.resx">
+      <DependentUpon>XFSTD1320.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1400.resx">
+      <DependentUpon>XFSTD1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD1101.resx">
+      <DependentUpon>XFSTD1101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD\XFSTD4M001.resx">
+      <DependentUpon>XFSTD4M001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD_POPUP\XPFSTD1100.resx">
+      <DependentUpon>XPFSTD1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD_POPUP\XPFSTD1200.resx">
+      <DependentUpon>XPFSTD1200.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD_POPUP\XPFSTD1400.resx">
+      <DependentUpon>XPFSTD1400.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\STD_POPUP\XPFSTD4M001.resx">
+      <DependentUpon>XPFSTD4M001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TOOL\XFTOOL1000.resx">
+      <DependentUpon>XFTOOL1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TOOL\XFTOOL1002.resx">
+      <DependentUpon>XFTOOL1002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TOOL\XFTOOL1001.resx">
+      <DependentUpon>XFTOOL1001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TRY\XFTRY1000.resx">
+      <DependentUpon>XFTRY1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UPH\XFUPH1100.resx">
+      <DependentUpon>XFUPH1100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WMS\XFWMS1000.resx">
+      <DependentUpon>XFWMS1000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\WMS\XFWMS2000.resx">
+      <DependentUpon>XFWMS2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XFCKEYPAD_LOGIN.resx">
+      <DependentUpon>XFCKEYPAD_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XFCNUMPAD.resx">
+      <DependentUpon>XFCNUMPAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XFCKEYPAD.resx">
+      <DependentUpon>XFCKEYPAD.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HKInc.Service\HKInc.Service.csproj">
+      <Project>{713a0b7b-55af-48b0-bc45-550403fd7237}</Project>
+      <Name>HKInc.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HKInc.Ui.Model\HKInc.Ui.Model.csproj">
+      <Project>{899963f0-93b5-4306-8365-a5824447b962}</Project>
+      <Name>HKInc.Ui.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HKInc.Utils\HKInc.Utils.csproj">
+      <Project>{cf476f03-0e8b-40c2-b1ac-6750a643b727}</Project>
+      <Name>HKInc.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\mold_icon_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

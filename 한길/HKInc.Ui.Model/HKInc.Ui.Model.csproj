@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{899963F0-93B5-4306-8365-A5824447B962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HKInc.Ui.Model</RootNamespace>
+    <AssemblyName>HKInc.Ui.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDomain\BaseDomain.cs" />
+    <Compile Include="BaseDomain\BaseDomain3.cs" />
+    <Compile Include="BaseDomain\GsValue.cs" />
+    <Compile Include="BaseDomain\MES_BaseDomain.cs" />
+    <Compile Include="BaseDomain\MES_BaseDomain2.cs" />
+    <Compile Include="Context\ProductionContext.cs" />
+    <Compile Include="Domain\CodeMaster.cs" />
+    <Compile Include="Domain\CodeSql.cs" />
+    <Compile Include="Domain\CultureField.cs" />
+    <Compile Include="Domain\FieldLabel.cs" />
+    <Compile Include="Domain\GridLayout.cs" />
+    <Compile Include="Domain\GroupMenu.cs" />
+    <Compile Include="Domain\LoginLog.cs" />
+    <Compile Include="Domain\Menu.cs" />
+    <Compile Include="Domain\MenuBookmark.cs" />
+    <Compile Include="Domain\MenuFavorite.cs" />
+    <Compile Include="Domain\MenuLog.cs" />
+    <Compile Include="Domain\MenuUserList.cs" />
+    <Compile Include="Domain\MenuUserRight.cs" />
+    <Compile Include="Domain\Module.cs" />
+    <Compile Include="Domain\Notice.cs" />
+    <Compile Include="Domain\ParameterInfo.cs" />
+    <Compile Include="Domain\PRT_OUTLABLE.cs" />
+    <Compile Include="Domain\RORD1200_DETAIL.cs" />
+    <Compile Include="Domain\Screen.cs" />
+    <Compile Include="Domain\StandardMessage.cs" />
+    <Compile Include="Domain\SystemLog.cs" />
+    <Compile Include="Domain\Temp.cs" />
+    <Compile Include="Domain\ReturnInLabelTemp.cs" />
+    <Compile Include="Domain\TN_MPS1407.cs" />
+    <Compile Include="Domain\TN_MPS1406.cs" />
+    <Compile Include="Domain\TN_MPS1405.cs" />
+    <Compile Include="Domain\TN_LOT_MST.cs" />
+    <Compile Include="Domain\TN_BAN1000.cs" />
+    <Compile Include="Domain\TN_BAN1001.cs" />
+    <Compile Include="Domain\TN_BAN1200.cs" />
+    <Compile Include="Domain\TN_BAN1201.cs" />
+    <Compile Include="Domain\TN_INDOO001.cs" />
+    <Compile Include="Domain\TN_INDOO002.cs" />
+    <Compile Include="Domain\TN_MEA1000.cs" />
+    <Compile Include="Domain\TN_MEA1100.cs" />
+    <Compile Include="Domain\TN_MEA1200.cs" />
+    <Compile Include="Domain\TN_MEA1300.cs" />
+    <Compile Include="Domain\TN_KNIFE001.cs" />
+    <Compile Include="Domain\TN_MOLD001.cs" />
+    <Compile Include="Domain\TN_KNIFE002.cs" />
+    <Compile Include="Domain\TN_MOLD002.cs" />
+    <Compile Include="Domain\TN_KNIFE003.cs" />
+    <Compile Include="Domain\TN_MOLD003.cs" />
+    <Compile Include="Domain\TN_MPS1000.cs" />
+    <Compile Include="Domain\TN_PUR1502.cs" />
+    <Compile Include="Domain\TN_PUR2001.cs" />
+    <Compile Include="Domain\TN_PUR2000.cs" />
+    <Compile Include="Domain\TN_MPS1001.cs" />
+    <Compile Include="Domain\TN_MPS1300.cs" />
+    <Compile Include="Domain\TN_MPS1400.cs" />
+    <Compile Include="Domain\TN_MPS1402.cs" />
+    <Compile Include="Domain\TN_MPS1700.cs" />
+    <Compile Include="Domain\TN_MPS1401.cs" />
+    <Compile Include="Domain\TN_MPS1404.cs" />
+    <Compile Include="Domain\TN_MPS1600.cs" />
+    <Compile Include="Domain\TN_MTTF1000.cs" />
+    <Compile Include="Domain\TN_ORD1000.cs" />
+    <Compile Include="Domain\TN_ORD1002.cs" />
+    <Compile Include="Domain\TN_ORD1100.cs" />
+    <Compile Include="Domain\TN_ORD1200.cs" />
+    <Compile Include="Domain\TN_ORD1201.cs" />
+    <Compile Include="Domain\TN_ORD1700.cs" />
+    <Compile Include="Domain\TN_ORD1600.cs" />
+    <Compile Include="Domain\TN_ORD1701.cs" />
+    <Compile Include="Domain\TN_ORD1601.cs" />
+    <Compile Include="Domain\TN_OUT1101.cs" />
+    <Compile Include="Domain\TN_PUR1100.cs" />
+    <Compile Include="Domain\TN_PUR1200.cs" />
+    <Compile Include="Domain\TN_PUR1300.cs" />
+    <Compile Include="Domain\TN_PUR1301.cs" />
+    <Compile Include="Domain\TN_PUR1500.cs" />
+    <Compile Include="Domain\TN_PUR1501.cs" />
+    <Compile Include="Domain\TN_PUR1600.cs" />
+    <Compile Include="Domain\TN_PUR1700.cs" />
+    <Compile Include="Domain\TN_PUR1800.cs" />
+    <Compile Include="Domain\TN_PUR1801.cs" />
+    <Compile Include="Domain\TN_QCT1000.cs" />
+    <Compile Include="Domain\TN_QCT1001T.cs" />
+    <Compile Include="Domain\TN_QCT1200.cs" />
+    <Compile Include="Domain\TN_QCT1201.cs" />
+    <Compile Include="Domain\TN_QCT1500.cs" />
+    <Compile Include="Domain\TN_QCT1700.cs" />
+    <Compile Include="Domain\TN_QCT2200.cs" />
+    <Compile Include="Domain\TN_STD1000.cs" />
+    <Compile Include="Domain\TN_STD1100.cs" />
+    <Compile Include="Domain\TN_STD1101.cs" />
+    <Compile Include="Domain\TN_STD1200.cs" />
+    <Compile Include="Domain\TN_STD1400.cs" />
+    <Compile Include="Domain\TN_STD1500.cs" />
+    <Compile Include="Domain\TN_STD1800.cs" />
+    <Compile Include="Domain\TN_STD1600.cs" />
+    <Compile Include="Domain\TN_STD4M001.cs" />
+    <Compile Include="Domain\TN_TRY001.cs" />
+    <Compile Include="Domain\TN_WMS1000.cs" />
+    <Compile Include="Domain\TN_WMS2000.cs" />
+    <Compile Include="Domain\TP_FAIL_RAT.cs" />
+    <Compile Include="Domain\TP_FAIL_TYPERAT.cs" />
+    <Compile Include="Domain\TP_MPS1900_Detail.cs" />
+    <Compile Include="Domain\TP_MPS1900_Master.cs" />
+    <Compile Include="Domain\TP_MTTF001.cs" />
+    <Compile Include="Domain\TP_MTTFCHART.cs" />
+    <Compile Include="Domain\TP_POPJOBLIST.cs" />
+    <Compile Include="Domain\TP_MPS1500.cs" />
+    <Compile Include="Domain\TP_PUR1700LIST.cs" />
+    <Compile Include="Domain\TP_QC1000.cs" />
+    <Compile Include="Domain\TP_SALETODLVRAT.cs" />
+    <Compile Include="Domain\TP_WORKER.cs" />
+    <Compile Include="Domain\TP_WORKPLANTORUN.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserDepartment.cs" />
+    <Compile Include="Domain\UserGroup.cs" />
+    <Compile Include="Domain\UserUserGroup.cs" />
+    <Compile Include="Domain\UserView.cs" />
+    <Compile Include="Domain\VI_BANTOCK_MST_Lot.cs" />
+    <Compile Include="Domain\VI_BAN_QTYM.cs" />
+    <Compile Include="Domain\VI_BAN_QTYSUM.cs" />
+    <Compile Include="Domain\VI_ADD_QC2000_LIST.cs" />
+    <Compile Include="Domain\VI_MEA1000_NOT_FILE_LIST.cs" />
+    <Compile Include="Domain\VI_MPS1700_MASTER.cs" />
+    <Compile Include="Domain\VI_INSPLIST.cs" />
+    <Compile Include="Domain\VI_MPS1401LIST.cs" />
+    <Compile Include="Domain\VI_MPSPLAN_LIST.cs" />
+    <Compile Include="Domain\VI_ORD1100.cs" />
+    <Compile Include="Domain\VI_ORD1200_DETAIL_ADD.cs" />
+    <Compile Include="Domain\VI_PRODQTYMSTLOT.cs" />
+    <Compile Include="Domain\VI_PRODQTY_DAY.cs" />
+    <Compile Include="Domain\VI_PRODQTY_DTL.cs" />
+    <Compile Include="Domain\VI_PRODQTY_MON.cs" />
+    <Compile Include="Domain\VI_PRODQTY_MST.cs" />
+    <Compile Include="Domain\VI_PUR1600LIST.cs" />
+    <Compile Include="Domain\VI_PUR1900V1.cs" />
+    <Compile Include="Domain\VI_PUR1900V2.cs" />
+    <Compile Include="Domain\VI_PURINOUT.cs" />
+    <Compile Include="Domain\VI_PURSTOCK_LOT.cs" />
+    <Compile Include="Domain\VI_PURSTOCK.cs" />
+    <Compile Include="Domain\VI_QCT1500_LIST.cs" />
+    <Compile Include="Domain\VI_LOTTRACKING.cs" />
+    <Compile Include="Domain\VI_SRC_STOCK_SUM.cs" />
+    <Compile Include="Domain\VI_SRC_USE.cs" />
+    <Compile Include="Domain\VI_TRY001.cs" />
+    <Compile Include="Domain\VI_WHPOSITON_QTY_D1.cs" />
+    <Compile Include="Domain\VI_WHPOSITON_QTY_D2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\VI_POLISTPRT.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Domain\App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

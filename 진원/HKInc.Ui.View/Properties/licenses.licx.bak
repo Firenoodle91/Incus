@@ -1,0 +1,11 @@
+DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.CheckEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraTreeList.TreeList, DevExpress.XtraTreeList.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraPrinting.Preview.DocumentViewer, DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraLayout.LayoutControl, DevExpress.XtraLayout.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraScheduler.SchedulerControl, DevExpress.XtraScheduler.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.PictureEdit, DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraCharts.ChartControl, DevExpress.XtraCharts.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

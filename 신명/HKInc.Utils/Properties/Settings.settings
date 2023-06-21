@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HKInc.Utils.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P@ssw0rdIncus##</Value>
+    </Setting>
+    <Setting Name="UserId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="DefaultServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PC-KJW\SQLEXPRESS</Value>
+    </Setting>
+    <Setting Name="DefaultDatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HKInc_Data_SM_2022-12-09</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

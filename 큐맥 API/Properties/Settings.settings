@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WindowsFormsApp2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">P@ssw0rdIncus##</Value>
+    </Setting>
+    <Setting Name="UserId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="DefaultServerName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">119.195.248.207</Value>
+    </Setting>
+    <Setting Name="DefaultDatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HKInc_Data_QMackM_V4</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

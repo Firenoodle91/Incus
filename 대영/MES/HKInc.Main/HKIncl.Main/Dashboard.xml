@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="ko-KR">
+  <Title Visible="false" Text="Notice Board" />
+  <Items>
+    <TextBox ComponentName="textBoxDashboardItem1" Name="Notice" ShowCaption="false">
+      <Text></Text>
+    </TextBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem DashboardItem="textBoxDashboardItem1" Weight="60.571428571428569" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

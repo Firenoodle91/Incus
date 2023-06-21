@@ -1,0 +1,150 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using HKInc.Utils.Interface.Service;
+using HKInc.Service.Factory;
+using HKInc.Ui.Model.Domain;
+using HKInc.Utils.Enum;
+using DevExpress.Utils;
+using DevExpress.XtraEditors.Repository;
+using HKInc.Utils.Class;
+using HKInc.Ui.View.PopupFactory;
+using HKInc.Utils.Interface.Popup;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraBars;
+using HKInc.Service.Service;
+using System.Data.SqlClient;
+using DevExpress.XtraCharts;
+using HKInc.Service.Handler;
+
+namespace HKInc.Ui.View.REPORT
+{
+    /// <summary>
+    /// 설비가동현황
+    /// </summary>
+    public partial class XFRMTTF001 : HKInc.Service.Base.ListFormTemplate
+    {
+        IService<TN_MEA1000> ModelService = (IService<TN_MEA1000>)ProductionFactory.GetDomainService("TN_MEA1000");
+        public XFRMTTF001()
+        {
+            InitializeComponent();
+            GridExControl = gridEx1;
+            
+            dp_dt.DateTime = DateTime.Today;
+        }
+
+        protected override void InitCombo()
+        {
+            lupMC.SetDefault(true, "MachineCode", "MachineName", ModelService.GetList(p => p.UseYn == "Y"&&p.SerialNo!="ETC").ToList());
+        }
+
+        protected override void InitGrid()
+        {
+            GridExControl.SetToolbarVisible(false);
+            GridExControl.MainGrid.AddColumn("MachineCode", "설비");
+            GridExControl.MainGrid.AddColumn("PType", "구분");
+            GridExControl.MainGrid.AddColumn("M01", "1월", HorzAlignment.Far, FormatType.Numeric, "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M02", "2월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M03", "3월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M04", "4월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M05", "5월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M06", "6월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M07", "7월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M08", "8월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M09", "9월", HorzAlignment.Far, FormatType.Numeric,  "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M10", "10월", HorzAlignment.Far, FormatType.Numeric, "#,###,##0.#");
+            GridExControl.MainGrid.AddColumn("M11", "12월", HorzAlignment.Far, FormatType.Numeric, "#,###,##0.#");            
+            GridExControl.MainGrid.AddColumn("MTOTAL", "누계", HorzAlignment.Far, FormatType.Numeric, "#,###,##0.#");
+            GridExControl.BestFitColumns();
+        }
+     
+        protected override void DataLoad()
+        {
+            #region Grid Focus를 위한 코드
+            GridRowLocator.GetCurrentRow("RowId", PopupDataParam.GetValue(PopupParameter.GridRowId_1));
+
+            //refresh 초기화
+            PopupDataParam.SetValue(PopupParameter.GridRowId_1, null);
+            #endregion
+
+            GridExControl.MainGrid.Clear();
+            ModelService.ReLoad();
+
+            string mc = lupMC.EditValue.GetNullToEmpty();
+            string dt = dp_dt.DateTime.Year.ToString();             // 년도로 검색이 안되서 수정   2022-07-22 김진우 
+            //string dt = dp_dt.DateTime.ToShortDateString();       // 년도로 검색이 안되서 수정   2022-07-22 김진우 
+
+            if (mc == "")
+            {
+                MessageBoxHandler.Show("설비를 선택하여 주십시오.");       // 2022-01-26 김진우 대리 추가
+                return;
+            }
+
+            using (var context = new HKInc.Ui.Model.Context.ProductionContext(HKInc.Utils.Common.ServerInfo.GetConnectString(HKInc.Utils.Common.GlobalVariable.ProductionDataBase)))
+            {
+                var fdt = new SqlParameter("@YYYY", dt);
+                var lmc = new SqlParameter("@MACHINE", mc);
+
+                var result = context.Database.SqlQuery<TP_MTTF001>("SP_MTTF_DATA  @YYYY, @MACHINE", fdt, lmc).ToList();
+                GridBindingSource.DataSource = result.Where(P=>1==1).ToList();
+            }
+           
+            GridExControl.DataSource = GridBindingSource;
+            GridExControl.BestFitColumns();
+            using (var context = new HKInc.Ui.Model.Context.ProductionContext(HKInc.Utils.Common.ServerInfo.GetConnectString(HKInc.Utils.Common.GlobalVariable.ProductionDataBase)))
+            {
+                var fdt = new SqlParameter("@YYYY", dt);
+                var lmc = new SqlParameter("@MACHINE", mc);
+
+                var result = context.Database.SqlQuery<TP_MTTFCHART>("SP_MTTF_DATA_CHART  @YYYY,@MACHINE", fdt, lmc).ToList();
+                List<TP_MTTFCHART> ds = result as List<TP_MTTFCHART>;
+
+                Chart1.Series.Clear();
+                Series LCL = new Series("MTBF", ViewType.ScatterLine);
+                LCL.DataSource = ds;
+                LCL.ArgumentDataMember = "MM";
+                LCL.ValueDataMembers.AddRange("MTBF");
+
+                Series UCL = new Series("MTTR", ViewType.ScatterLine);
+                UCL.DataSource = ds;
+                UCL.ArgumentDataMember = "MM";
+                UCL.ValueDataMembers.AddRange("MTTR");
+
+                LCL.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+                UCL.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+
+                Chart1.Series.Add(LCL);
+                Chart1.Series.Add(UCL);
+
+                Chart1.CrosshairEnabled = DefaultBoolean.True;
+                Chart1.CrosshairOptions.ShowValueLabels = true;
+                XYDiagram diagram = (XYDiagram)Chart1.Diagram;
+
+                diagram.AxisY.WholeRange.Auto = true;      // y축 범위 자동변경 설정 
+                diagram.AxisX.Label.Font = new Font(@"맑은고딕", 9f);
+                diagram.AxisY.Label.TextPattern = "{V:n0}";
+
+                diagram.EnableAxisXScrolling = true;
+                diagram.EnableAxisYScrolling = true;
+                diagram.AxisX.VisualRange.Auto = true;
+                diagram.AxisY.VisualRange.Auto = true;
+            }
+
+            #region Grid Focus를 위한 수정 필요
+            GridRowLocator.SetCurrentRow();
+            #endregion
+            SetRefreshMessage(GridExControl.MainGrid.RecordCount);
+        }
+
+      
+
+      
+    }
+}
