@@ -3,16 +3,16 @@
   <Profiles />
   <Settings>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">IncusKey!@</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="UserId" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Incus</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultServerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">115.21.37.142</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultDatabaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">EDUCATION</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
   </Settings>
 </SettingsFile>

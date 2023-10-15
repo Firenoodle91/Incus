@@ -6,20 +6,19 @@
       <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">P@ssw0rdIncus##
-</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultServerName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">59.15.227.69</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="ProductionDatabaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">HKInc_Data_Hangil</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultDatabaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">HKInc_Data_Hangil</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
     <Setting Name="DefaultFileStreamDatabaseName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">HKInc_Data_Hangil</Value>
+      <Value Profile="(Default)"></Value>
     </Setting>
   </Settings>
 </SettingsFile>

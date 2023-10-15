@@ -89,7 +89,7 @@ namespace HKInc.Service.Forms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            tx_ip.Text = "59.15.227.69";
+            tx_ip.Text = "";
             GlobalVariable.LocalIP = "N";
             ini.IniWriteValue("server", "ip", AESEncrypt256.Encrypt(tx_ip.Text, "hkinc"), aa);
             ini.IniWriteValue("server", "user", AESEncrypt256.Encrypt(tx_user.Text, "hkinc"), aa);
@@ -117,8 +117,8 @@ namespace HKInc.Service.Forms
         private void button5_Click(object sender, EventArgs e)
         {
             GlobalVariable.LocalIP = "Y";
-            tx_ip.Text = "115.91.98.2";
-            tx_db.Text = "HKInc_Data_SJ";
+            tx_ip.Text = "";
+            tx_db.Text = "";
             ini.IniWriteValue("server", "ip", AESEncrypt256.Encrypt(tx_ip.Text, "hkinc"), aa);
             ini.IniWriteValue("server", "user", AESEncrypt256.Encrypt(tx_user.Text, "hkinc"), aa);
             ini.IniWriteValue("server", "passwd", AESEncrypt256.Encrypt(tx_passwd.Text, "hkinc"), aa);

@@ -261,8 +261,8 @@ namespace HKInc.Service.Handler
             string uri = _ip + fileInf.Name;
             FtpWebRequest reqFTP;
             reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri(uri));
-            reqFTP.Credentials = new NetworkCredential("com", "P@ssw0rdlncus!");
-            //reqFTP.Credentials = new NetworkCredential("com", "P@ssw0rdIncus!@");
+            reqFTP.Credentials = new NetworkCredential("", "");
+            //reqFTP.Credentials = new NetworkCredential("", "");
             reqFTP.KeepAlive = true;
             reqFTP.Method = WebRequestMethods.Ftp.UploadFile;
             reqFTP.UseBinary = true;
